@@ -3,6 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/Contexts/themeContext";
 import Header from "@/Components/Header";
 import Footer from "@/Components/Footer";
+import ScrollToTop from "@/utils/scrollToTop";
 
 export const metadata: Metadata = {
   title: "Dev in Progress",
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body>
         <ThemeProvider>
           <Header />
+          <ScrollToTop />
           <div className="content">{children}</div>
           <Footer />
         </ThemeProvider>
