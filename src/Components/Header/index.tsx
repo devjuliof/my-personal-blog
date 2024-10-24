@@ -2,11 +2,13 @@
 
 import React from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation"; // Hook para verificar a página atual
+import { usePathname } from "next/navigation";
 import styles from "./index.module.css";
-import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
 import { font_nunito } from "@/app/fonts";
 import { useTheme } from "@/Contexts/themeContext";
+import Image from "next/image";
+import sunIcon from "@/../public/sun_icon.png";
+import moonIcon from "@/../public/moon_icon.png";
 
 const Header: React.FC = () => {
   const pathname = usePathname();
@@ -42,12 +44,24 @@ const Header: React.FC = () => {
           <button className={styles.darkModeButton} onClick={toggleTheme}>
             {isDarkMode ? (
               <>
-                <SunIcon className={styles.icon} />
+                <Image
+                  src={sunIcon}
+                  className={styles.icon}
+                  alt="Sun Icon"
+                  width={24}
+                  height={24}
+                />
                 <span>Light Mode</span>
               </>
             ) : (
               <>
-                <MoonIcon className={styles.icon} />
+                <Image
+                  src={moonIcon}
+                  className={styles.icon}
+                  alt="Moon Icon"
+                  width={24}
+                  height={24}
+                />
                 <span>Dark Mode</span>
               </>
             )}
