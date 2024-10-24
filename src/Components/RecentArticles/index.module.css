@@ -1,0 +1,42 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.header button {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  cursor: pointer;
+  background-color: white;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.header button:hover {
+  border-color: #4caf50;
+  background-color: white;
+  color: #4caf50;
+}
+
+.infoArticle ul li {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-inter);
+  font-size: 18px;
+  padding-bottom: 6px;
+  border-bottom: 1px dashed var(--text-color);
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.infoArticle li:hover {
+  color: #4caf50;
+  transform: translateY(-5px);
+  border-bottom: 1px dashed #4caf50;
+}
+
+.infoArticle a {
+  color: black;
+  text-decoration: none;
+}

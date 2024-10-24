@@ -1,0 +1,22 @@
+.sectionApresentation {
+  display: flex;
+  flex-direction: column;
+}
+
+.floatImg {
+  float: right;
+  margin: 0 15px 15px 10px;
+  width: 40%;
+  shape-outside: circle(50%);
+}
+
+.sectionApresentation h1 {
+  font-family: var(--font-tittle);
+  font-size: 48px;
+}
+
+.sectionApresentation p {
+  font-family: var(--font-inter);
+  font-size: 19px;
+  margin-top: 24px;
+}

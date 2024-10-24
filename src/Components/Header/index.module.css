@@ -1,0 +1,94 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 20px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  z-index: 1000;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.listLinks {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.listLinks li {
+  list-style-type: none;
+  margin: 0 15px;
+}
+
+.listLinks a {
+  color: inherit;
+  text-decoration: none;
+  position: relative; /* Para usar o pseudo-elemento */
+  transition: color 0.3s ease;
+  padding-bottom: 5px; /* Para dar espaço para a borda inferior */
+}
+
+.listLinks a:hover {
+  color: #ccc;
+}
+
+/* Adicionando um efeito de destaque com pseudo-elemento */
+.listLinks a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -2px; /* Distância do texto */
+  width: 0;
+  height: 2px;
+  background-color: #4caf50; /* Cor do destaque */
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.listLinks a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.activeLink::after {
+  content: none;
+}
+
+.activeLink {
+  border-bottom: 2px solid #4caf50;
+  color: #4caf50;
+}
+
+.darkModeButton {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.darkModeButton:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}

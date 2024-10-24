@@ -1,0 +1,15 @@
+.articleCard {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.articleCard a {
+  text-decoration: none;
+  color: black;
+}
+
+.articleCard h3:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
