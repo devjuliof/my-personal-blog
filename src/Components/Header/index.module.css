@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   right: 0;
-  width: 90%;
+  width: 98%;
   max-width: 600px;
   padding: 20px;
   margin: 0 auto;
@@ -13,7 +13,16 @@
   z-index: 1000;
   background-color: transparent;
   backdrop-filter: blur(5px);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+@media screen and (max-width: 400px) {
+  .header span {
+    display: none;
+    margin: 0;
+  }
 }
 
 .header:hover {
@@ -35,25 +44,26 @@
 .listLinks a {
   color: inherit;
   text-decoration: none;
-  position: relative; /* Para usar o pseudo-elemento */
+  position: relative;
   transition: color 0.3s ease;
-  padding-bottom: 5px; /* Para dar espaço para a borda inferior */
+  padding-bottom: 5px;
 }
 
 .listLinks a:hover {
   color: #ccc;
 }
 
-/* Adicionando um efeito de destaque com pseudo-elemento */
 .listLinks a::after {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: -2px; /* Distância do texto */
+  bottom: -2px;
   width: 0;
   height: 2px;
-  background-color: #4caf50; /* Cor do destaque */
-  transition: width 0.3s ease, left 0.3s ease;
+  background-color: #4caf50;
+  transition:
+    width 0.3s ease,
+    left 0.3s ease;
 }
 
 .listLinks a:hover::after {
@@ -79,7 +89,9 @@
   border-radius: 8px;
   padding: 10px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .darkModeButton:hover {
