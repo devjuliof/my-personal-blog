@@ -21,7 +21,7 @@ const Header: React.FC = () => {
       <ul className={styles.listLinks}>
         <li>
           <Link href="/" className={pathname === "/" ? styles.activeLink : ""}>
-            Julio C. Faria
+            Hello
           </Link>
         </li>
         <li>
